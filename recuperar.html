@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Container principal da página -->
+    <main class="container">
+        <!-- Seção que contém o formulário de recuperação de senha -->
+        <section class="recuperar-box">
+            <h1>Recuperar Senha</h1> <!-- Título da página -->
+            <p>Digite seu e-mail para receber as instruções de redefinição de senha.</p>
+            
+            <!-- Formulário de recuperação de senha -->
+            <!-- Formulário que envia os dados para a página index.html usando o método POST -->
+            <form action="index.html" method="POST">
+                <label for="email">E-mail:</label> <!-- Rótulo para o campo de e-mail -->
+                <input type="email" id="email" name="email" required> <!-- Campo de entrada para o e-mail -->
+                <button type="submit">Enviar</button> <!-- Botão para enviar o formulário -->
+            </form>
+            
+            <!-- Link para voltar à página de login -->
+            <nav>
+                <a href="index.html">Voltar para Login</a>
+            </nav>
+        </section>
+    </main>
+</body>
+</html>

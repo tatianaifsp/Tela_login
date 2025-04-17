@@ -1,0 +1,138 @@
+
+/* Definição da paleta de cores SENAI */
+:root {
+    --primary-color: #003366;  /* Azul escuro SENAI */
+    --secondary-color: #E60012; /* Vermelho SENAI */
+    --accent-color: #FFFFFF; /* Branco para contraste */
+    --background-color: #D32F2F; /* Tom de vermelho mais suave para melhor acessibilidade */
+    --text-color: #333333; /* Cinza escuro para texto */
+}
+
+/* ==========================
+   Reset e Estilos Globais
+   ========================== */
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+    background-color: var(--background-color); /* Define a cor de fundo */
+    color: var(--text-color); /* Define a cor do texto */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    display: grid; /* Usa Grid para centralizar */
+    place-items: center; /* Centraliza horizontal e verticalmente */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+}
+
+/* ==========================
+   Tela de Login, Cadastro e Recuperação
+   ========================== */
+
+/* Container Principal */
+.container {
+    display: grid; /* Usa Grid para organizar os elementos */
+    grid-template-columns: 1fr; /* Define uma única coluna */
+    gap: 20px; /* Espaçamento entre os elementos */
+    padding: 20px; /* Espaçamento interno */
+    width: 100%; /* Define a largura total */
+    max-width: 400px; /* Define um limite máximo de largura */
+    background: var(--accent-color); /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    text-align: center; /* Centraliza o conteúdo */
+    border: 2px solid var(--primary-color); /* Adiciona borda */
+}
+
+/* Formulários */
+.auth-box {
+    background: var(--accent-color); /* Fundo branco */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    text-align: center; /* Centraliza o conteúdo */
+    width: 100%; /* Ajusta à largura máxima */
+    max-width: 350px; /* Define um limite máximo de largura */
+    display: grid; /* Usa Grid para organizar */
+    grid-template-columns: 1fr; /* Define layout em uma única coluna */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+.auth-box label {
+    display: block; /* Garante que os labels fiquem em linhas separadas */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin-bottom: 5px; /* Adiciona espaçamento abaixo do label */
+}
+
+.auth-box input {
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    padding: 12px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho de fonte maior para melhor leitura */
+    display: block; /* Faz com que o input fique abaixo do label */
+    margin-bottom: 10px; /* Adiciona espaçamento entre os inputs */
+}
+
+.auth-box button {
+    width: 100%; /* Ocupa toda a largura */
+    background-color: var(--secondary-color); /* Cor de destaque */
+    color: var(--accent-color); /* Texto branco */
+    border: none; /* Remove bordas */
+    padding: 12px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+    font-size: 18px; /* Fonte maior para botão mais destacado */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.auth-box button:hover {
+    background-color: var(--primary-color); /* Muda para azul escuro */
+}
+
+/* ==========================
+   Dashboard
+   ========================== */
+
+/* Cabeçalho do Dashboard */
+.dashboard-header {
+    background-color: var(--primary-color); /* Fundo azul escuro */
+    color: var(--accent-color); /* Texto branco */
+    padding: 15px; /* Espaçamento interno */
+    display: grid; /* Usa Grid para alinhar os itens */
+    grid-template-columns: 1fr auto; /* Ajusta a distribuição do espaço */
+    align-items: center; /* Alinha os itens verticalmente */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+}
+
+.dashboard-header nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    display: grid; /* Usa Grid para organizar os itens */
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto)); /* Responsivo */
+    gap: 15px; /* Espaçamento entre os itens */
+    padding: 0; /* Remove preenchimento padrão */
+    margin: 0; /* Remove margens */
+}
+
+.dashboard-header nav a {
+    color: var(--accent-color); /* Mantém o texto branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Layout do Dashboard */
+.dashboard-content {
+    display: grid; /* Usa Grid para organizar os elementos */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta dinamicamente para evitar superlotação */
+    gap: 30px; /* Espaçamento maior para melhor organização */
+    justify-content: center; /* Centraliza os elementos */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.card {
+    background: var(--accent-color); /* Fundo branco */
+    padding: 25px; /* Espaçamento interno maior */
+    border-radius: 10px; /* Bordas arredondadas maiores */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais suave e realista */
+    text-align: center; /* Centraliza o conteúdo */
+    font-size: 18px; /* Aumenta o tamanho da fonte para melhor leitura */
+}
